@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
+import { useUser } from "@/context/user.provider";
 import { getUserFormAxiois } from "@/services/user";
-import { IPost, IUser } from "@/types";
+import { IPost } from "@/types";
 import { convert } from "html-to-text";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,9 +25,9 @@ interface UserData {
   role: string;
 }
 
-const Card = ({ post, user }: { post: IPost; user: IUser | null }) => {
+const Card = ({ post }: { post: IPost }) => {
   const { _id, author, title, postImage, content, category, isPremium } = post;
-  // const { user } = useUser();
+  const { user } = useUser();
   console.log("Card component rendered", post);
 
   console.log("get user all detaisl from card-->", user);

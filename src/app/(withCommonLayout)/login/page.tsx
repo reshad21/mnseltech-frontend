@@ -35,7 +35,7 @@ const LoginPage = () => {
   return (
     <div className="flex h-[calc(100vh-200px)] w-full flex-col items-center justify-center bg-gray-50 px-4">
       <h3 className="my-2 text-3xl font-bold text-gray-800">
-        Login to PetBuddy
+        Login to Munna TV
       </h3>
       <p className="mb-6 text-gray-600">Welcome back! Let’s get started.</p>
       <div className="w-full max-w-md bg-white p-8 rounded-md shadow-md">
