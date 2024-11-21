@@ -3,10 +3,9 @@ import Image from "next/image";
 import React from "react";
 
 const Designation: React.FC = () => {
-  const imageUrl = "https://tinyurl.com/4ub3spue"; // Direct image URL from Google Drive
   return (
     <section className="relative bg-gradient-to-br from-[#05021d] to-[#5e0a99] text-[#e3e2fd] py-20 px-8 rounded-xl">
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between space-y-12 lg:space-y-0">
         {/* Left Content */}
         <div className="lg:w-1/2 text-center lg:text-left">
           <h1 className="text-5xl font-bold leading-tight">
@@ -33,16 +32,26 @@ const Designation: React.FC = () => {
         </div>
 
         {/* Right Content */}
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2 flex justify-center">
           <div className="relative">
-            <div className="absolute -inset-2 bg-gradient-to-br from-[#5e0a99] to-[#d182e3] rounded-full blur-lg opacity-70"></div>
+            {/* Profile Image */}
             <Image
-              src={imageUrl}
-              alt="Your Profile"
-              width={400}
-              height={400}
-              className="relative z-10 w-64 h-64 mx-auto lg:mx-0 object-cover rounded-full shadow-lg"
+              src="/images/reshad.jpg"
+              alt="Profile Picture"
+              width={300}
+              height={300}
+              className="rounded-full shadow-xl"
             />
+
+            {/* Minimal Caption */}
+            <div className="text-center mt-6">
+              <h3 className="text-2xl font-semibold text-[#9d98f0]">
+                Full-Stack Developer
+              </h3>
+              <p className="text-lg text-gray-300 mt-2">
+                Specializing in modern web applications
+              </p>
+            </div>
           </div>
         </div>
       </div>
