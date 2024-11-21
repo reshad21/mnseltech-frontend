@@ -1,37 +1,29 @@
 "use client";
 
+import { useGetAllPost } from "@/hooks/getAllPost.hook";
+import { IPost } from "@/types";
+import { convert } from "html-to-text";
 import Image from "next/image";
+import Link from "next/link";
+import { useEffect } from "react";
 
 export default function Blog() {
-  const blogs = [
-    {
-      id: 1,
-      title: "The Future of Technology",
-      description:
-        "Explore the latest trends shaping the future of technology, including AI, blockchain, and quantum computing.",
-      image: "https://source.unsplash.com/800x600/?technology,ai",
-      date: "November 20, 2024",
-      author: "John Doe",
-    },
-    {
-      id: 2,
-      title: "10 Tips for Personal Growth",
-      description:
-        "Learn actionable tips to boost your personal and professional growth and achieve your goals.",
-      image: "https://source.unsplash.com/800x600/?growth,success",
-      date: "November 18, 2024",
-      author: "Jane Smith",
-    },
-    {
-      id: 3,
-      title: "Traveling the World on a Budget",
-      description:
-        "Discover how to explore the world without breaking the bank, with travel hacks and tips.",
-      image: "https://source.unsplash.com/800x600/?travel,adventure",
-      date: "November 15, 2024",
-      author: "Emily Davis",
-    },
-  ];
+  const { mutate: getPosts, isSuccess, error, data } = useGetAllPost();
+  console.log("blogs-->", data?.data);
+
+  // Fetch posts when the component mounts
+  useEffect(() => {
+    getPosts();
+  }, [getPosts]);
+
+  // Function to truncate content to a specified word limit
+  const truncateContent = (content: string, wordLimit: number) => {
+    const plainText = convert(content, { wordwrap: false });
+    const words = plainText.split(" ");
+    return words.length > wordLimit
+      ? words.slice(0, wordLimit).join(" ") + "..."
+      : plainText;
+  };
 
   return (
     <section className="relative py-16 bg-gradient-to-br from-[#1e1c45] via-[#302d6b] to-[#5e0a99] text-white my-5 rounded-xl">
@@ -40,47 +32,68 @@ export default function Blog() {
           Latest Blogs
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogs.map((blog) => (
-            <div
-              key={blog.id}
-              className="rounded-lg shadow-lg overflow-hidden transform transition hover:-translate-y-2 duration-300 bg-[#302d6b]"
-            >
-              <div className="relative w-full h-48">
-                <Image
-                  src={blog.image}
-                  alt={blog.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  priority={blog.id === 1}
-                />
-              </div>
-              <div className="p-6">
-                <h3
-                  className="text-2xl font-semibold mb-3"
-                  style={{ color: "#e3e2fd" }}
-                >
-                  {blog.title}
-                </h3>
-                <p
-                  className="text-sm mb-4"
-                  style={{ color: "#d182e3", fontSize: "0.95rem" }}
-                >
-                  {blog.description}
-                </p>
-                <div
-                  className="flex items-center justify-between text-sm mb-4"
-                  style={{ color: "#9d98f0" }}
-                >
-                  <span>By {blog.author}</span>
-                  <span>{blog.date}</span>
+          {error ? (
+            <p className="text-red-500">
+              Error fetching posts: {error.message}
+            </p>
+          ) : isSuccess && data ? (
+            data.data.map((post: IPost) => (
+              <div
+                key={post._id}
+                className="rounded-lg shadow-lg overflow-hidden transform transition hover:-translate-y-2 duration-300 bg-[#302d6b]"
+              >
+                <div className="relative w-full h-48">
+                  {post.postImage && (
+                    <Image
+                      src={post.postImage}
+                      alt={post.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  )}
                 </div>
-                <button className="py-2 px-4 rounded-lg shadow-md transition duration-300 bg-gradient-to-r from-[#9d98f0] to-[#5e0a99] text-white hover:from-[#d182e3] hover:to-[#9d98f0]">
-                  Read More
-                </button>
+                <div className="p-6">
+                  <h3
+                    className="text-2xl font-semibold mb-3"
+                    style={{ color: "#e3e2fd" }}
+                  >
+                    {post.title}
+                  </h3>
+                  {/* <p
+                    className="text-sm mb-4"
+                    style={{ color: "#d182e3", fontSize: "0.95rem" }}
+                  >
+                    {post.content}
+                  </p> */}
+                  <p
+                    className="text-sm mb-4"
+                    style={{ color: "#d182e3", fontSize: "0.95rem" }}
+                  >
+                    {truncateContent(post?.content, 50)}
+                  </p>
+                  <div
+                    className="flex items-center justify-between text-sm mb-4"
+                    style={{ color: "#9d98f0" }}
+                  >
+                    <span>By {post.author.name}</span>
+                    {/* <span>{post.date}</span> */}
+                  </div>
+                  <Link
+                    href={`/post/${post._id}`}
+                    className="py-2 px-4 rounded-lg shadow-md transition duration-300 bg-gradient-to-r from-[#9d98f0] to-[#5e0a99] text-white hover:from-[#d182e3] hover:to-[#9d98f0]"
+                  >
+                    Read More
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <li className="flex items-center justify-center">
+              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600 mr-2"></div>
+              Loading posts...
+            </li>
+          )}
         </div>
       </div>
     </section>
