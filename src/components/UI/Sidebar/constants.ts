@@ -1,5 +1,6 @@
 export const userLinks = [
     { href: "/profile/posts", label: "Posts" },
+    { href: "/profile/projects", label: "Projects" },
     { href: "/profile/settings", label: "Settings" },
 ];
 

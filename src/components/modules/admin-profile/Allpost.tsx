@@ -23,8 +23,8 @@ const AllPost = () => {
     allPost();
   }, [allPost]);
 
+  //Delete post
   const { mutate: deletepost } = useDeletePost();
-
   const handleDelete = (postId: string) => {
     deletepost(postId);
   };

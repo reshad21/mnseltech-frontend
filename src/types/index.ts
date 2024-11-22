@@ -98,3 +98,12 @@ export interface TChangePasswordData {
 }
 
 
+
+export type TProjectData = {
+    _id?: string;
+    title: string;
+    liveLink: string;
+    content: string;
+    tech: string[];
+};
+
