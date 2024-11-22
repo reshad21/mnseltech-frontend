@@ -7,7 +7,7 @@ import { toast } from "sonner";
 
 export const useCreateProject = () => {
     return useMutation<any, Error, FieldValues>({
-        mutationKey: ["CREATE_PROJECT"],
+        mutationKey: ["PROJECT_LIST"],
         mutationFn: async (formData) => await createProject(formData),
         onSuccess: () => {
             toast.success("Project created successfully."); // Updated message for clarity
