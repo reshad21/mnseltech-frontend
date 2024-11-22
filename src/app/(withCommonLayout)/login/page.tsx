@@ -28,7 +28,7 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (!isPending && isSuccess) {
-      router.push(redirect ? redirect : "/");
+      router.push(redirect ? redirect : "/profile");
     }
   }, [isPending, isSuccess, redirect, router]);
 

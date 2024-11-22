@@ -23,7 +23,8 @@ const Designation: React.FC = () => {
           </p>
           <p className="mt-6">
             <a
-              href="#contact"
+              href="https://drive.google.com/file/d/1QV0JFOYJJsS6BFZGXM1vnd1kJz7WT2oN/view?usp=sharing"
+              target="_blank"
               className="inline-block bg-[#9d98f0] text-[#05021d] py-3 px-6 rounded-lg shadow-md hover:bg-[#d182e3] transition duration-300"
             >
               RESUME
