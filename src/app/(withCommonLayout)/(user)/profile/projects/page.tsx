@@ -15,13 +15,13 @@ const ProjectPage = () => {
     data,
   } = useGetAllProject();
 
-  // Delete project
-  const { mutate: deleteProject } = useDeleteProject();
-
   // Fetch projects on component mount
   useEffect(() => {
     getAllProject();
   }, [getAllProject]);
+
+  //delete custome hook
+  const { mutate: deleteProject } = useDeleteProject();
 
   const handleDeleteClick = (projectId: string | undefined) => {
     if (!projectId) {
@@ -90,6 +90,7 @@ const ProjectPage = () => {
                     {project.liveLink}
                   </a>
                 </td>
+
                 <td className="px-6 py-4 text-sm text-gray-700">
                   {project.tech && project.tech.length > 0
                     ? project.tech.join(", ")
