@@ -12,8 +12,8 @@ const PortfolioPage = () => {
     <>
       <Designation />
       <MyIntroduction />
-      <EducationalDescription />
       <Skills />
+      <EducationalDescription />
       <Projects />
       <ContactUs />
       <Blog />

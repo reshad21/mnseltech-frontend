@@ -15,7 +15,7 @@ const Designation: React.FC = () => {
   const designationTitle = data?.data?.designationTitle || "Web Developer";
 
   return (
-    <section className="relative bg-gradient-to-br from-[#05021d] to-[#5e0a99] text-[#e3e2fd] py-20 px-8 rounded-xl">
+    <section className="relative bg-gradient-to-t from-[#1e1c45] via-[#302d6b] to-[#5e0a99] text-[#e3e2fd] py-20 px-8 rounded-xl mb-5">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between space-y-12 lg:space-y-0">
         {/* Left Content */}
         <div className="lg:w-1/2 text-center lg:text-left">

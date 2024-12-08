@@ -37,7 +37,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section className="bg-gradient-to-br from-[#05021d] to-[#5e0a99] py-20 px-4 sm:px-8 rounded-xl">
+    <section className="bg-gradient-to-t from-[#1e1c45] via-[#302d6b] to-[#5e0a99] py-20 px-4 sm:px-8 rounded-xl">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold mb-10 text-[#9d98f0] text-center">
           My Projects

@@ -5,9 +5,9 @@ const Skills: React.FC = () => {
   const techSkills = [
     { name: "JavaScript", level: 90 },
     { name: "React.js", level: 85 },
-    { name: "Node.js", level: 80 },
+    { name: "Next.js", level: 80 },
     { name: "MongoDB", level: 75 },
-    { name: "HTML & CSS", level: 95 },
+    { name: "Express.js", level: 95 },
   ];
 
   const softSkills = [
@@ -33,7 +33,7 @@ const Skills: React.FC = () => {
     ));
 
   return (
-    <section className="relative bg-gradient-to-br from-[#05021d] to-[#5e0a99] text-[#e3e2fd] py-20 px-8 rounded-xl my-5">
+    <section className="relative bg-gradient-to-t from-[#1e1c45] via-[#302d6b] to-[#5e0a99] text-[#e3e2fd] py-20 px-8 rounded-xl my-5">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         {/* Technical Skills */}
         <div>

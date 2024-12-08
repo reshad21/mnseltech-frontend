@@ -32,7 +32,7 @@ export default function ContactUs() {
   };
 
   return (
-    <section className="relative py-16 bg-gradient-to-br from-[#05021d] via-[#141539] to-[#5e0a99] text-white my-5 rounded-xl">
+    <section className="relative py-16 bg-gradient-to-t from-[#1e1c45] via-[#302d6b] to-[#5e0a99] text-white my-5 rounded-xl">
       {/* Gradient Accent */}
       <div className="absolute -top-16 -left-16 w-48 h-48 bg-gradient-to-br from-[#ff4c30] to-[#f97a61] rounded-full blur-3xl opacity-30"></div>
       <div className="absolute -bottom-16 -right-16 w-64 h-64 bg-gradient-to-br from-[#f9e6dc] to-[#ff4c30] rounded-full blur-3xl opacity-30"></div>
