@@ -5,12 +5,7 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 
 const Designation: React.FC = () => {
-  const {
-    mutate: getDesignation,
-    data,
-    isError,
-    isSuccess,
-  } = useGetDesignation();
+  const { mutate: getDesignation, data, isSuccess } = useGetDesignation();
 
   useEffect(() => {
     getDesignation();
@@ -28,13 +23,6 @@ const Designation: React.FC = () => {
             Hello, I'm{" "}
             <span className="text-[#9d98f0]">Rashed Uzzaman Reshad</span>
           </h1>
-
-          {/* Error Message */}
-          {isError && (
-            <p className="text-xl mt-4 text-red-500">
-              Failed to load designation. Please try again later.
-            </p>
-          )}
 
           {/* Success Content */}
           {isSuccess && (

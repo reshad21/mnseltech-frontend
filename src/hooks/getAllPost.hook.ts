@@ -8,7 +8,7 @@ export const useGetAllPost = (page: number = 1) => {
         mutationKey: ["GETALL_POSTS"],
         mutationFn: async () => await getAllPost(page), // Ensure postId is a string
         onSuccess: () => {
-            toast.success("All posts fetched successfully."); // Update the message for clarity
+            console.log("ALL Post Fetched Successfully"); // Update the message for clarity
         },
         onError: (error: Error) => {
             toast.error(error.message);

@@ -8,7 +8,7 @@ export const useGetDesignation = () => {
         mutationKey: ["DESIGNATION_LIST"],
         mutationFn: async () => await getDesignation(), // Ensure postId is a string
         onSuccess: () => {
-            toast.success("Designaton Retrive Successfully."); // Update the message for clarity
+            console.log("Designaton Retrive Successfully."); // Update the message for clarity
         },
         onError: (error: Error) => {
             toast.error(error.message);

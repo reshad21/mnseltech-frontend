@@ -9,7 +9,6 @@ import { useEffect } from "react";
 
 export default function Blog() {
   const { mutate: getPosts, isSuccess, error, data } = useGetAllPost();
-  console.log("blogs-->", data?.data);
 
   // Fetch posts when the component mounts
   useEffect(() => {

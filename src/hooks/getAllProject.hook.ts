@@ -8,7 +8,7 @@ export const useGetAllProject = () => {
         mutationKey: ["PROJECT_LIST"],
         mutationFn: async () => await getAllProject(), // Ensure postId is a string
         onSuccess: () => {
-            toast.success("All project fetched successfully."); // Update the message for clarity
+            console.log("All project fetched successfully."); // Update the message for clarity
         },
         onError: (error: Error) => {
             toast.error(error.message);
