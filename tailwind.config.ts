@@ -31,6 +31,7 @@ const config: Config = {
         h2: ["64px", { lineHeight: "72px", fontWeight: "700" }], // Syne
         h3: ["56px", { lineHeight: "64px", fontWeight: "700" }], // Syne
         h4: ["24px", { lineHeight: "32px", fontWeight: "400" }], // Rubik Regular
+        p: ["18px", { lineHeight: "32px", fontWeight: "400" }], // Rubik Regular
         bodyLarge: ["18px", { lineHeight: "28px", fontWeight: "400" }], // Rubik Regular
         bodyMedium: ["16px", { lineHeight: "24px", fontWeight: "400" }], // Rubik Regular
         button: ["16px", { lineHeight: "24px", fontWeight: "400" }], // Rubik Regular

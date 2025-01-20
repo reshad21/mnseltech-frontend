@@ -30,7 +30,7 @@ export default function Topber() {
   ];
 
   return (
-    <header className="bg-secondary-light py-4 px-6">
+    <header className="bg-secondary-light py-4 px-6 mb-[227px]">
       <nav className="flex items-center justify-between max-w-screen-xl mx-auto">
         {/* Logo */}
         <div className="flex items-center">
