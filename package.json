@@ -1,5 +1,5 @@
 {
-  "name": "pet-buddy-frntend",
+  "name": "mnseltech-frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@heroui/react": "^2.6.14",
     "@hookform/resolvers": "^3.9.0",
     "@nextui-org/navbar": "^2.0.37",
     "@nextui-org/react": "^2.4.8",

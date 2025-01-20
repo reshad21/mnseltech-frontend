@@ -2,6 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Other global styles */
+body {
+    /* color: white; */
+    background-color: #1a1a1a;
+    /* Optional: Set background to black for better contrast */
+    /* font-family: 'Arial', sans-serif, "Rubik"; */
+    /* Customize your font */
+}
+
+
+h1 {
+    @apply font-syne text-h1;
+}
+
+h2 {
+    @apply font-syne text-h2;
+}
+
+h3 {
+    @apply font-syne text-h3;
+}
+
+h4 {
+    @apply font-rubik text-h4;
+}
+
+p.large {
+    @apply font-rubik text-bodyLarge;
+}
+
+p.medium {
+    @apply font-rubik text-bodyMedium;
+}
+
+button {
+    @apply font-rubik text-button;
+}
+
+
+
+
+
 /* Custom styles for React Quill */
 .ql-editor {
     min-height: 200px;
@@ -34,3 +77,6 @@
     @apply text-base;
     /* Tailwind's text-base */
 }
+
+
+/* Custom styles for App typography */
