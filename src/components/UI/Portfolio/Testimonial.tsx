@@ -5,7 +5,11 @@ import Container from "../Container";
 const Testimonial = () => {
   return (
     <Container>
-      <div className="px-4 relative">
+      <div className="px-4 relative mb-16">
+        <div
+          className="absolute w-[200px] h-[200px] sm:w-[280px] sm:h-[280px] md:w-[317.14px] md:h-[353.03px] top-[-50px] left-[-60px] md:top-[-90px] md:left-[-160px] bg-[rgba(255,255,255,0.14)] rounded-full blur-3xl"
+          style={{ transform: "rotate(198.32deg)" }}
+        ></div>
         {/* Quote Icon */}
         <div className="absolute top-[-3%] right-3 md:top-[-30%] md:right-10">
           <Image
