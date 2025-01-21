@@ -31,16 +31,6 @@ h4 {
     @apply font-rubik text-h4;
 }
 
-
-/* p {
-    @apply font-rubik;
-} */
-
-/* Class to apply Rubik font */
-/* p.syne {
-    @apply font-syne;
-} */
-
 p.large {
     @apply font-rubik text-bodyLarge;
 }

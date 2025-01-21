@@ -8,6 +8,7 @@ import ProjectHeader from "@/components/UI/Portfolio/ProjectHeader";
 import ProjectHeighlights from "@/components/UI/Portfolio/ProjectHeighlights";
 import Projects from "@/components/UI/Portfolio/Projects";
 import Skills from "@/components/UI/Portfolio/Skills";
+import Testimonial from "@/components/UI/Portfolio/Testimonial";
 import Topber from "@/components/UI/Portfolio/TopBer";
 
 const PortfolioPage = () => {
@@ -18,6 +19,7 @@ const PortfolioPage = () => {
       <MyIntroduction />
       <ProjectHeader />
       <ProjectHeighlights />
+      <Testimonial />
       <Skills />
       <EducationalDescription />
       <Projects />
