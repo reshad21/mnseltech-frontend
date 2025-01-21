@@ -14,9 +14,11 @@ const Footer = () => {
               <p className="bodyMedium font-syne text-brandOrange-light mb-6">
                 Get in Touch With Us
               </p>
-              <h3 className="font-syne underline">info@aaronn.com</h3>
+              <h3 className="font-syne underline text-[24px] md:text-6xl">
+                info@aaronn.com
+              </h3>
             </div>
-            <div className="flex flex-col md:flex-row justify-between border-b-2 border-slate-300 pb-10 mb-5">
+            <div className="flex flex-col gap-4 md:gap-0 md:flex-row justify-between border-b-2 border-slate-300 pb-10 mb-5">
               <Image src={logo} width={125} height={22} alt="brand logo" />
               <ul className="flex flex-col">
                 <li>Street Avenue 21, CA</li>
