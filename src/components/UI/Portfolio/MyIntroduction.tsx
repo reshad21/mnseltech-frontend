@@ -5,7 +5,7 @@ import Container from "../Container";
 const MyIntroduction = () => {
   return (
     <Container>
-      <div className="flex flex-col md:flex-row justify-center items-center h-fit px-4 md:px-4">
+      <div className="flex flex-col md:flex-row justify-center items-center h-fit px-4 md:px-4 mb-[224px]">
         {/* Left Part */}
         <div className="flex flex-col gap-6 md:gap-10 relative w-full md:w-1/2 text-center md:text-left">
           {/* Accent Element */}
