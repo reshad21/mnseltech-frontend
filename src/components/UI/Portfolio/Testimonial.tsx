@@ -1,16 +1,30 @@
 import Image from "next/image";
 import quotes from "../../../../public/images/quoets.png";
 import Container from "../Container";
+
 const Testimonial = () => {
   return (
     <Container>
       <div className="px-4 relative">
-        <div className="absolute top-[-20%] right-3">
-          <Image src={quotes} width={199} height={183} alt="quotes" />
+        {/* Quote Icon */}
+        <div className="absolute top-[-3%] right-3 md:top-[-30%] md:right-10">
+          <Image
+            src={quotes}
+            width={199}
+            height={183}
+            alt="quotes"
+            className="w-16 sm:w-24 md:w-48" // Adjust size for responsiveness
+          />
         </div>
-        <h2 className="max-w-[891px] font-syne mb-12">Testimonial</h2>
-        <div className="testimonial-card">
-          <p>
+
+        {/* Heading */}
+        <h2 className="max-w-full md:max-w-[891px] font-syne mb-8 text-2xl sm:text-3xl md:text-4xl md:text-left">
+          Testimonial
+        </h2>
+
+        {/* Testimonial Card */}
+        <div className="">
+          <p className="text-sm sm:text-base md:text-lg">
             “Aaronn was fantastic to work with from start to finish. We were
             looking for a simple, stand-out logo and he delivered. I tried
             designing the logo myself thinking I wouldn’t need to pay the money
@@ -21,8 +35,12 @@ const Testimonial = () => {
             professionalism. I would recommend him to anyone looking for a
             design!”
           </p>
-          <div className="relative my-7">
-            <p className="text-2xl font-syne">-Martin lee</p>
+
+          {/* Author Section */}
+          <div className="relative mt-6">
+            <p className="text-base sm:text-lg md:text-2xl font-syne md:text-left">
+              - Martin Lee
+            </p>
           </div>
         </div>
       </div>
