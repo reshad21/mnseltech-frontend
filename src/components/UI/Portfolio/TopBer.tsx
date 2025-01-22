@@ -6,11 +6,15 @@ import Container from "../Container";
 
 export const AcmeLogo = () => {
   return (
-    <img
-      src="/images/Brand-logo.svg"
-      alt="Company Logo"
-      className="h-[22px] w-[125px]" // Tailwind CSS example for height and width
-    />
+    <>
+      <Link href="/">
+        <img
+          src="/images/Brand-logo.svg"
+          alt="Company Logo"
+          className="h-[22px] w-[125px]" // Tailwind CSS example for height and width
+        />
+      </Link>
+    </>
   );
 };
 
@@ -31,7 +35,7 @@ export default function Topber() {
   ];
 
   return (
-    <header className="bg-[#1a1a1a] py-4 px-6 mb-[227px] sticky top-0 z-50">
+    <header className="bg-[#1a1a1a] py-4 px-6 sticky top-0 z-50">
       <Container>
         <div className="px-4 pl-1">
           <nav className="flex items-center justify-between max-w-screen-xl mx-auto">
@@ -54,25 +58,25 @@ export default function Topber() {
             {/* Desktop Navbar Links */}
             <div className="hidden sm:flex items-center gap-6">
               <Link
-                href="#"
+                href="/"
                 className="text-white hover:opacity-80 text-[14px]"
               >
                 HOME
               </Link>
               <Link
-                href="#"
+                href="/about-me"
                 className="text-white hover:opacity-80 text-[14px]"
               >
                 ABOUT ME
               </Link>
               <Link
-                href="#"
+                href="/my-work"
                 className="text-white hover:opacity-80 text-[14px]"
               >
                 MY WORK
               </Link>
               <Link
-                href="#"
+                href="/contact"
                 className="text-white hover:opacity-80 text-[14px] bg-[#03030480] rounded-full px-3 py-1 border-2 border-slate-400"
               >
                 CONTACT

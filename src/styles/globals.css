@@ -3,6 +3,10 @@
 @tailwind utilities;
 @import "@fontsource/syne";
 @import "@fontsource/rubik";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/700.css";
+
+/* npm install @fontsource/inter */
 
 
 /* Other global styles */

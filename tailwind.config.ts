@@ -25,6 +25,7 @@ const config: Config = {
       fontFamily: {
         syne: ["Syne", "sans-serif"],
         rubik: ["Rubik", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
       },
       fontSize: {
         h1: ["72px", { lineHeight: "80px", fontWeight: "700" }], // Syne Bold

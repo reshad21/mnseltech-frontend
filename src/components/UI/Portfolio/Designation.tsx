@@ -3,7 +3,7 @@ import Container from "../Container";
 const Designation = () => {
   return (
     <Container>
-      <div className="flex flex-col gap-[115px] justify-center items-center relative mb-[246px]">
+      <div className="flex flex-col gap-[115px] justify-center items-center relative my-[246px]">
         {/* Accent Element */}
         <div
           className="absolute w-full h-full md:w-[417.14px] md:h-[253.03px] top-[-80px] right-[220px] bg-[rgba(255,255,255,0.14)] rounded-full blur-3xl"
