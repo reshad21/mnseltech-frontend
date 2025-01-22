@@ -16,11 +16,11 @@ const page = () => {
 
         {/* Flexbox Section */}
         <div className="flex flex-wrap gap-6 justify-center">
-          {/* Row 1: 3 Items */}
+          {/* Row 1: 3 Items (on large screens) */}
           {[1, 2, 3].map((_, idx) => (
             <div
               key={idx}
-              className="flex-shrink-0 basis-[calc(33.333%-1rem)] max-w-[calc(33.333%-1rem)]"
+              className="flex-shrink-0 basis-full sm:basis-[calc(33.333%-1rem)] md:basis-[calc(33.333%-1rem)] w-full"
             >
               <Image
                 src={myWork1}
@@ -38,11 +38,11 @@ const page = () => {
             </div>
           ))}
 
-          {/* Row 2: 2 Items spanning full width */}
+          {/* Row 2: 2 Items (on larger screens) */}
           {[1, 2].map((_, idx) => (
             <div
               key={idx}
-              className="flex-shrink-0 basis-[calc(50%-0.75rem)] max-w-[calc(50%-0.75rem)]"
+              className="flex-shrink-0 basis-full sm:basis-[calc(50%-0.75rem)] md:basis-[calc(50%-0.75rem)] w-full"
             >
               <Image
                 src={myWork1}
@@ -60,11 +60,11 @@ const page = () => {
             </div>
           ))}
 
-          {/* Row 3: 3 Items */}
+          {/* Row 3: 3 Items (on large screens) */}
           {[1, 2, 3].map((_, idx) => (
             <div
               key={idx}
-              className="flex-shrink-0 basis-[calc(33.333%-1rem)] max-w-[calc(33.333%-1rem)]"
+              className="flex-shrink-0 basis-full sm:basis-[calc(33.333%-1rem)] md:basis-[calc(33.333%-1rem)] w-full"
             >
               <Image
                 src={myWork1}

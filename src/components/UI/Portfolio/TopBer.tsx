@@ -35,7 +35,7 @@ export default function Topber() {
   ];
 
   return (
-    <header className="bg-[#1a1a1a] py-4 px-6 sticky top-0 z-50">
+    <header className="bg-[#1a1a1a] py-4 px-0 md:px-6 sticky top-0 z-50">
       <Container>
         <div className="px-4 pl-1">
           <nav className="flex items-center justify-between max-w-screen-xl mx-auto">
