@@ -1,6 +1,7 @@
 import Image from "next/image";
 import myimage from "../../../../public/images/944eff94db883c7f58e710c7af01f099.png";
 import Container from "../Container";
+import AccentElement from "./AccentElement";
 
 const MyIntroduction = () => {
   return (
@@ -9,10 +10,7 @@ const MyIntroduction = () => {
         {/* Left Part */}
         <div className="flex flex-col gap-6 md:gap-10 relative w-full md:w-1/2 text-center md:text-left">
           {/* Accent Element */}
-          <div
-            className="absolute w-[200px] h-[200px] sm:w-[280px] sm:h-[280px] md:w-[317.14px] md:h-[353.03px] top-[-50px] left-[-60px] md:top-[-90px] md:left-[-160px] bg-[rgba(255,255,255,0.14)] rounded-full blur-3xl"
-            style={{ transform: "rotate(198.32deg)" }}
-          ></div>
+          <AccentElement className="absolute w-full md:w-[417.14px] md:h-[253.03px] top-[-85%] left-[-60%]" />
 
           <h2 className="font-syne text-2xl sm:text-3xl md:text-4xl">
             Let’s get to know about me closer

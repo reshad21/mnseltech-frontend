@@ -1,14 +1,16 @@
 import Container from "../Container";
+import AccentElement from "./AccentElement";
 
 const ProjectHeader = () => {
   return (
     <Container>
       <div className="flex flex-col gap-10 justify-center items-center relative mb-[246px]">
         {/* Accent Element */}
-        <div
-          className="absolute w-full h-full md:w-[417.14px] md:h-[253.03px] top-[-80px] right-[220px] bg-[rgba(255,255,255,0.14)] rounded-full blur-3xl"
-          style={{ transform: "rotate(198.32deg)" }}
-        ></div>
+        <AccentElement
+          className="absolute top-[-80%] right-[13%]"
+          width={550}
+          height={379}
+        />
 
         <h2 className="text-center max-w-[891px] mx-0 px-4 md:mx-auto md:px-28 font-syne">
           My Projects Highlight
