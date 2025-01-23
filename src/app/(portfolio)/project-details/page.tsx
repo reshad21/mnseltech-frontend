@@ -1,4 +1,5 @@
 import Container from "@/components/UI/Container";
+import AccentElement from "@/components/UI/Portfolio/AccentElement";
 import Image from "next/image";
 import Link from "next/link";
 import projectImage from "../../../../public/images/3.jpeg";
@@ -9,7 +10,9 @@ const page = () => {
     <Container>
       <div className="px-4 my-24">
         {/* Section Header */}
-        <div className="pb-20 mb-20 border-b-2 border-slate-400">
+        <div className="pb-20 mb-20 border-b-2 border-slate-400 relative">
+          {/* Accent Element positioned with Tailwind */}
+          <AccentElement className="absolute w-full md:w-[417.14px] md:h-[253.03px] top-[-200%] left-[-40%]" />
           <h1 className="font-syne text-4xl">Project Detail</h1>
           <span className="font-rubik bodyMedium text-[#949494]">
             Details About The Porject
