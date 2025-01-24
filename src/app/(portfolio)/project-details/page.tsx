@@ -123,7 +123,7 @@ const page = () => {
                   <p className="text-2xl font-inter font-bold">Orvillebury</p>
                 </div>
               </Link>
-              <Link href="#" className="w-full">
+              <Link href="/project-details" className="w-full">
                 <Image
                   src={projectTwoDetails}
                   alt="project details"

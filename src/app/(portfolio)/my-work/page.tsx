@@ -1,6 +1,7 @@
 import Container from "@/components/UI/Container";
 import AccentElement from "@/components/UI/Portfolio/AccentElement";
 import Image from "next/image";
+import Link from "next/link";
 import myWork1 from "../../../../public/images/my-work-1.jpeg";
 
 const page = () => {
@@ -25,13 +26,15 @@ const page = () => {
               key={idx}
               className="flex-shrink-0 basis-full sm:basis-[calc(33.333%-1rem)] md:basis-[calc(33.333%-1rem)] w-full"
             >
-              <Image
-                src={myWork1}
-                width={361}
-                height={439}
-                alt="my-work-images"
-                className="rounded-xl w-full"
-              />
+              <Link href="/project-details" className="w-full">
+                <Image
+                  src={myWork1}
+                  width={361}
+                  height={439}
+                  alt="my-work-images"
+                  className="rounded-xl w-full"
+                />
+              </Link>
               <div className="text-center mt-2">
                 <span className="text-[13px] font-inter uppercase text-gray-500 font-bold">
                   blue
@@ -47,13 +50,15 @@ const page = () => {
               key={idx}
               className="flex-shrink-0 basis-full sm:basis-[calc(50%-0.75rem)] md:basis-[calc(50%-0.75rem)] w-full"
             >
-              <Image
-                src={myWork1}
-                width={361}
-                height={439}
-                alt="my-work-images"
-                className="rounded-xl w-full"
-              />
+              <Link href="/project-details" className="w-full">
+                <Image
+                  src={myWork1}
+                  width={361}
+                  height={439}
+                  alt="my-work-images"
+                  className="rounded-xl w-full"
+                />
+              </Link>
               <div className="text-center mt-2">
                 <span className="text-[13px] font-inter uppercase text-gray-500 font-bold">
                   blue
@@ -69,13 +74,15 @@ const page = () => {
               key={idx}
               className="flex-shrink-0 basis-full sm:basis-[calc(33.333%-1rem)] md:basis-[calc(33.333%-1rem)] w-full"
             >
-              <Image
-                src={myWork1}
-                width={361}
-                height={439}
-                alt="my-work-images"
-                className="rounded-xl w-full"
-              />
+              <Link href="/project-details" className="w-full">
+                <Image
+                  src={myWork1}
+                  width={361}
+                  height={439}
+                  alt="my-work-images"
+                  className="rounded-xl w-full"
+                />
+              </Link>
               <div className="text-center mt-2">
                 <span className="text-[13px] font-inter uppercase text-gray-500 font-bold">
                   blue

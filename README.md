@@ -1,36 +1,134 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Project
+
+This is a Next.js project bootstrapped with `create-next-app`.
+
+---
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Environment Variables](#environment-variables)
+- [Development](#development)
+- [Production](#production)
+- [Deployment](#deployment)
+- [Resources](#resources)
+- [License](#license)
+
+---
+
+## Introduction
+
+This project is built using [Next.js](https://nextjs.org/), a powerful React-based framework for server-rendered applications. It leverages modern web development practices and is ready for both local development and production deployment.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
+Before running this project, ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- npm, yarn, pnpm, or bun (for package management)
+- Git (for version control)
+
+### Installation
+
+1. Clone the repository and navigate to the project folder:
+
+   ```bash
+   git clone <repository-url>
+   cd <project-folder>
+
+   ```
+
+2. Install the project dependencies:
+   npm install
+
+   # or
+
+   yarn install
+
+   # or
+
+   pnpm install
+
+   # or
+
+   bun install
+
+3. Environment Variables
+   This project uses environment variables to manage configuration. Create a .env.local file in the root directory of the project and add the following variables:
+
+   NEXT_PUBLIC_BASE_API=https://portfolio-backend-beta-roan.vercel.app/api
+   NEXT_PUBLIC_BASE_URL=https://portfolio-backend-beta-roan.vercel.app/
+
+   # Uncomment these for local development:
+
+   # NEXT_PUBLIC_BASE_API=http://localhost:5000/api
+
+   # NEXT_PUBLIC_BASE_URL=http://localhost:5000/
+
+   NEXTAUTH_SECRET=abc
+
+The production server will be accessible at http://localhost:3000.
+
+4. Development
+   npm run dev
+
+   # or
+
+   yarn dev
+
+   # or
+
+   pnpm dev
+
+   # or
+
+   bun dev
+
+5. Production
+   To test the production build locally:
+
+Build the project:
+
+bash
+Copy
+Edit
+npm run build
+
 # or
-yarn dev
+
+yarn build
+Start the production server:
+
+bash
+Copy
+Edit
+npm start
+
 # or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+yarn start
+The production server will be accessible at http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+6. Deployment
+   The easiest way to deploy this Next.js application is via the Vercel Platform, created by the developers of Next.js.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To deploy, follow these steps:
 
-## Learn More
+Push your code to a GitHub repository.
+Connect your repository to Vercel.
+Vercel will automatically detect the Next.js project and deploy it.
+For more details, refer to the Next.js Deployment Documentation.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+7. Resources
+   Next.js Documentation - Learn about Next.js features and API.
+   Learn Next.js - Interactive Next.js tutorial.
+   Next.js GitHub Repository - Feedback and contributions are welcome.
+   License
+   This project is licensed under [your license here]. Make sure to replace this section with the actual license used in your project.
