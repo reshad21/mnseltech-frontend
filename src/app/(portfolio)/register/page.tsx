@@ -1,16 +1,13 @@
 "use client";
-import FXForm from "@/components/form/FXForm";
-import FXInput from "@/components/form/FXInput";
+
 import { useUserRegistration } from "@/hooks/auth.hook";
 import registerValidationSchema from "@/schemas/register.schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@nextui-org/button";
-// import { useMutation } from "@tanstack/react-query";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
-// import { useEffect } from "react";
-import { FieldValues, SubmitHandler } from "react-hook-form";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
 export default function RegisterPage() {
   const searchParams = useSearchParams();
@@ -22,6 +19,20 @@ export default function RegisterPage() {
     isPending,
     isSuccess,
   } = useUserRegistration();
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(registerValidationSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      mobileNumber: "",
+      password: "",
+    },
+  });
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     const userData = {
@@ -40,37 +51,101 @@ export default function RegisterPage() {
 
   return (
     <div className="flex h-[calc(100vh-100px)] flex-col items-center justify-center">
-      <h3 className="my-2 text-xl font-bold text-white">
+      <h3 className="my-2 font-bold text-white text-2xl">
         Register with AARONN
       </h3>
       <div className="w-[35%]">
-        <FXForm
-          //! Only for development
-          defaultValues={{
-            name: "",
-            email: "",
-            mobileNumber: "",
-            password: "",
-          }}
-          resolver={zodResolver(registerValidationSchema)}
-          onSubmit={onSubmit}
-        >
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="py-3">
-            <FXInput label="Name" name="name" size="sm" />
-          </div>
-          <div className="py-3">
-            <FXInput label="Email" name="email" size="sm" />
-          </div>
-          <div className="py-3">
-            <FXInput label="Mobile Number" name="mobileNumber" size="sm" />
-          </div>
-          <div className="py-3">
-            <FXInput
-              label="Password"
-              name="password"
-              size="sm"
-              type="password"
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-white"
+            >
+              Name
+            </label>
+            <input
+              id="name"
+              {...register("name")}
+              type="text"
+              className={`mt-1 block w-full rounded-md border-gray-300 bg-white p-2 text-gray-800 focus:border-blue-500 focus:ring-blue-500 sm:text-sm ${
+                errors.name ? "border-red-500" : ""
+              }`}
+              placeholder="Enter your name"
             />
+            {errors.name && (
+              <p className="mt-1 text-sm text-red-500">
+                {errors.name.message as string}
+              </p>
+            )}
+          </div>
+
+          <div className="py-3">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-white"
+            >
+              Email
+            </label>
+            <input
+              id="email"
+              {...register("email")}
+              type="email"
+              className={`mt-1 block w-full rounded-md border-gray-300 bg-white p-2 text-gray-800 focus:border-blue-500 focus:ring-blue-500 sm:text-sm ${
+                errors.email ? "border-red-500" : ""
+              }`}
+              placeholder="Enter your email"
+            />
+            {errors.email && (
+              <p className="mt-1 text-sm text-red-500">
+                {errors.email.message as string}
+              </p>
+            )}
+          </div>
+
+          <div className="py-3">
+            <label
+              htmlFor="mobileNumber"
+              className="block text-sm font-medium text-white"
+            >
+              Mobile Number
+            </label>
+            <input
+              id="mobileNumber"
+              {...register("mobileNumber")}
+              type="text"
+              className={`mt-1 block w-full rounded-md border-gray-300 bg-white p-2 text-gray-800 focus:border-blue-500 focus:ring-blue-500 sm:text-sm ${
+                errors.mobileNumber ? "border-red-500" : ""
+              }`}
+              placeholder="Enter your mobile number"
+            />
+            {errors.mobileNumber && (
+              <p className="mt-1 text-sm text-red-500">
+                {errors.mobileNumber.message as string}
+              </p>
+            )}
+          </div>
+
+          <div className="py-3">
+            <label
+              htmlFor="password"
+              className="block text-sm font-medium text-white"
+            >
+              Password
+            </label>
+            <input
+              id="password"
+              {...register("password")}
+              type="password"
+              className={`mt-1 block w-full rounded-md border-gray-300 bg-white p-2 text-gray-800 focus:border-blue-500 focus:ring-blue-500 sm:text-sm ${
+                errors.password ? "border-red-500" : ""
+              }`}
+              placeholder="Enter your password"
+            />
+            {errors.password && (
+              <p className="mt-1 text-sm text-red-500">
+                {errors.password.message as string}
+              </p>
+            )}
           </div>
 
           <Button
@@ -80,9 +155,13 @@ export default function RegisterPage() {
           >
             Registration
           </Button>
-        </FXForm>
+        </form>
+
         <div className="text-center text-white">
-          Already have an account ? <Link href={"/login"}>Login</Link>
+          Already have an account?{" "}
+          <Link href={"/login"} className="underline">
+            Login
+          </Link>
         </div>
       </div>
     </div>
