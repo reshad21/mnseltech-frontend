@@ -40,7 +40,9 @@ export default function RegisterPage() {
 
   return (
     <div className="flex h-[calc(100vh-100px)] flex-col items-center justify-center">
-      <h3 className="my-2 text-xl font-bold">Register with Petbuddy</h3>
+      <h3 className="my-2 text-xl font-bold text-white">
+        Register with AARONN
+      </h3>
       <div className="w-[35%]">
         <FXForm
           //! Only for development
@@ -72,14 +74,14 @@ export default function RegisterPage() {
           </div>
 
           <Button
-            className="my-3 w-full rounded-md bg-default-900 text-default"
+            className="my-3 w-full rounded-md bg-brandOrange text-white font-inter"
             size="lg"
             type="submit"
           >
             Registration
           </Button>
         </FXForm>
-        <div className="text-center">
+        <div className="text-center text-white">
           Already have an account ? <Link href={"/login"}>Login</Link>
         </div>
       </div>

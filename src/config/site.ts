@@ -8,18 +8,6 @@ export const siteConfig = {
             label: "HOME",
             href: "/",
         },
-        {
-            label: "ABOUT",
-            href: "/about",
-        },
-        {
-            label: "PORTFOLIO",
-            href: "/portfolio",
-        },
-        {
-            label: "CONTACT",
-            href: "/contact",
-        },
     ],
     navMenuItems: [
         {

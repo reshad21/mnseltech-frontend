@@ -62,10 +62,10 @@ const PostPage = () => {
 
   return (
     <>
-      <div className="max-w-full mx-auto mt-10 p-6 bg-white shadow-md rounded-lg border border-gray-300 overflow-x-auto">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-4">All Posts</h2>
+      <div className="max-w-full mx-auto p-6 shadow-md rounded-lg border border-gray-300 overflow-x-auto">
+        <h2 className="text-2xl font-semibold mb-4">All Posts</h2>
         {userAllPosts.length > 0 ? (
-          <table className="min-w-full bg-white border border-gray-300">
+          <table className="min-w-full border border-gray-300">
             <thead className="bg-gray-200">
               <tr>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
@@ -129,7 +129,7 @@ const PostPage = () => {
             </tbody>
           </table>
         ) : (
-          <p className="text-gray-600">No posts available.</p>
+          <p className="text-gray-300">No posts available.</p>
         )}
 
         {/* Modal for editing post */}

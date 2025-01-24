@@ -64,18 +64,18 @@ const ProjectForm: React.FC = () => {
           id="title"
           {...register("title", { required: "Title is required" })}
           type="text"
-          className="border p-2 rounded w-full"
+          className="border p-2 rounded w-full text-slate-300 !bg-inherit"
         />
         {errors.title && <p className="text-red-500">{errors.title.message}</p>}
       </div>
 
       <div>
-        <label htmlFor="liveLink">Project URL:</label>
+        <label htmlFor="liveLink">Project Image URL:</label>
         <input
           id="liveLink"
           {...register("liveLink", { required: "Project URL is required" })}
           type="text"
-          className="border p-2 rounded w-full"
+          className="border p-2 rounded w-full text-slate-300 !bg-inherit"
         />
         {errors.liveLink && (
           <p className="text-red-500">{errors.liveLink.message}</p>
@@ -115,14 +115,14 @@ const ProjectForm: React.FC = () => {
           })}
           type="text"
           placeholder="e.g., React, Next.js, MongoDB, Express"
-          className="border p-2 rounded w-full"
+          className="border p-2 rounded w-full text-slate-300 !bg-inherit"
         />
         {errors.tech && <p className="text-red-500">{errors.tech.message}</p>}
       </div>
 
       <button
         type="submit"
-        className="bg-blue-500 text-white py-2 px-4 rounded"
+        className="bg-brandOrange text-white py-2 px-4 rounded"
       >
         Submit
       </button>
